@@ -1,0 +1,8 @@
+fear-env/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.csv
+*.pt
+*.pkl
+.DS_Store
