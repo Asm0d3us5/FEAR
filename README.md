@@ -1,6 +1,6 @@
 # FEAR — Flow-based Explainable Anomaly Recognition
 
-A hybrid unsupervised machine learning framework for flow-based, explainable anomaly detection in encrypted network traffic. Built for SIT326 (Advanced Network Analytics and Forensics), Pass Task 5.
+A hybrid unsupervised machine learning framework for flow-based, explainable anomaly detection in encrypted network traffic. 
 
 **Core idea:** detect suspicious network activity using only flow-level metadata (packet size, timing, direction) — no payload decryption required.
 
@@ -32,6 +32,6 @@ A hybrid unsupervised machine learning framework for flow-based, explainable ano
 
 A running log of things learned, decisions made, and problems solved along the way.
 
-- **[Date]** — Note here.
-
+## Date
+- **[08/08/2026]**  
 
