@@ -11,8 +11,8 @@ A hybrid unsupervised machine learning framework for flow-based, explainable ano
 ### Week 1 — Foundation & Data
 - [x] Ubuntu 26.04 LTS VM set up (VirtualBox, 4 CPU / 12GB RAM / 50GB disk)
 - [x] Git + SSH configured, GitHub repo created
-- [ ] Docker installed
-- [ ] Python environment + ML stack installed (scikit-learn, PyTorch, SHAP, Streamlit)
+- [x] Docker installed
+- [x] Python environment + ML stack installed (scikit-learn, PyTorch, SHAP, Streamlit)
 - [ ] CIC-IDS2017 + CIC-IoT2023 downloaded and explored
 - [ ] Feature schemas aligned across datasets
 - [ ] Class imbalance handled (SMOTE); preprocessing pipeline built
