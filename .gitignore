@@ -6,3 +6,6 @@ __pycache__/
 *.pt
 *.pkl
 .DS_Store
+*.zip
+*.pdf
+data/
