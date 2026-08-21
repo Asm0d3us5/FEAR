@@ -9,3 +9,4 @@ __pycache__/
 *.zip
 *.pdf
 data/
+!dashboard/flagged_results.csv
