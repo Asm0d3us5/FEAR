@@ -25,11 +25,12 @@ Full technical findings and discovery log: [docs/findings.md](docs/findings.md)
 - [x] Domain shift diagnosed and confirmed via recalibration test
 
 ### Week 3 — Explainability, Robustness, Tooling (in progress)
-- [ ] SHAP explainability
-- [ ] Adversarial evasion testing
-- [ ] Streamlit dashboard
+- [x] SHAP explainability
+- [x] Adversarial evasion testing
+- [x] Streamlit dashboard
 
 ### Week 4 — Packaging & Reporting
+- [x] Container-friendly path refactor (Docker prep)
 - [ ] Dockerize pipeline
 - [ ] README/architecture diagram, demo video
 - [ ] Final report write-up and submission
