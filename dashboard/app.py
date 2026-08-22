@@ -1,6 +1,11 @@
 import streamlit as st
 import pandas as pd
 
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from config import FLAGGED_RESULTS_PATH, SHAP_VALUES_PATH
+
 st.set_page_config(page_title="FEAR Dashboard", layout="wide")
 
 st.title("FEAR — Flow-based Explainable Anomaly Recognition")
@@ -28,14 +33,14 @@ comparison_data = {
     "Training Time": ["~9 sec", "~37 sec", "~225 sec"],
 }
 df_comparison = pd.DataFrame(comparison_data)
-st.dataframe(df_comparison, use_container_width=True)
+st.dataframe(df_comparison, width='stretch')
 
 st.markdown("**Leading model:** Autoencoder selected for its substantially higher recall, the priority metric for forensic use where missing an attack costs more than a false alarm.")
 
 st.markdown("---")
 st.header("Flagged Flows")
 
-results = pd.read_csv("flagged_results.csv")
+results = pd.read_csv(FLAGGED_RESULTS_PATH)
 
 status_filter = st.selectbox(
     "Filter by outcome",
@@ -54,13 +59,13 @@ else:
 st.write(f"Showing {len(display_df)} flows")
 st.dataframe(
     display_df[['original_label', 'anomaly_score', 'predicted_anomaly', 'true_label']],
-    use_container_width=True
+    width='stretch'
 )
 
 st.markdown("---")
 st.header("Explain a Flow")
 
-shap_values = pd.read_csv("shap_values.csv")
+shap_values = pd.read_csv(SHAP_VALUES_PATH)
 feature_cols = [c for c in results.columns if c not in
                 ['true_label', 'anomaly_score', 'predicted_anomaly', 'original_label']]
 
@@ -107,7 +112,7 @@ robustness_data = {
                       "Naive brute-force", "Sophisticated, full model access"],
     "Evasion Rate": ["0%", "0%", "0%", "35.3%"],
 }
-st.dataframe(pd.DataFrame(robustness_data), use_container_width=True)
+st.dataframe(pd.DataFrame(robustness_data), width='stretch')
 st.caption("The model resists realistic, low-to-medium sophistication attacks, but retains a "
            "quantifiable vulnerability against a fully-informed, white-box adversary.")
 
